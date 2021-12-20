@@ -62,3 +62,6 @@ def get_aqi():
 
     # Load the AQI data and create the GeoJSON for the specified bounds.
     return json.dumps(load_aqi_data(bounds[0], bounds[1], bounds[2], bounds[3]))
+
+if __name__ == '__main__':
+    app.run()
