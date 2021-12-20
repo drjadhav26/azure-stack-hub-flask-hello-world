@@ -9,13 +9,13 @@ on:
     branches:
       - master
   workflow_dispatch:
-env:
-  WAQI_API_KEY : ${{secrets.WAQI_API_KEY}}
+
   
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      WAQI_API_KEY: ${{secrets.WAQI_API_KEY}}
     steps:
       - uses: actions/checkout@v2
 
