@@ -14,8 +14,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      WAQI_API_KEY: ${{secrets.WAQI_API_KEY}}
     steps:
       - uses: actions/checkout@v2
 
@@ -48,6 +46,8 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    env:
+      WAQI_API_KEY: ${{secrets.WAQI_API_KEY}}
 
     steps:
       - name: Download artifact from build job
