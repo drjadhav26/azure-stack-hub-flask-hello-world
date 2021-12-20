@@ -29,13 +29,14 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-        env:
-          WAQI_API_KEY: ${{ secrets.WAQI_API_KEY }}
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
+        env:
+          WAQI_API_KEY: ${{ secrets.WAQI_API_KEY }}
         with:
           name: python-app
           path: |
