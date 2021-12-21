@@ -7,6 +7,7 @@ import logging
 MAP_KEY ="df281e80ea32d5d73fec41de267055807895176e" #os.environ["MAP_KEY"]
 # Load the World Air Quality Index key from the .env file.
 WAQI_API_KEY = "df281e80ea32d5d73fec41de267055807895176e" #os.getenv("WAQI_API_KEY")
+WAQI_API_KEY1 = os.getenv("WAQI_API_KEY")
 logging.info(f'WAQI_API_KEY:{WAQI_API_KEY}')
 WAQI_API_URL = "https://api.waqi.info/map/bounds/?latlng={},{},{},{}&token={}"
 
@@ -17,7 +18,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # Create data for the home page to pass the Maps key.
-    data = { "map_key" : MAP_KEY }
+    data = { "map_key" : MAP_KEY, "map_key1" = WAQI_API_KEY1 }
     # Return the rendered HTML page
     return render_template("home.html", data = data)
 
