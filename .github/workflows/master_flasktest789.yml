@@ -9,8 +9,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-env:
-  WAQI_API_KEY: ${{ secrets.WAQI_API_KEY }}
 
 jobs:
   build:
@@ -62,4 +60,4 @@ jobs:
         with:
           app-name: 'flasktest789'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_828ED92BB1B342BBA667962C5A85D5E1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_01F240AE0E004453A031D0A6D57A51A9 }}
