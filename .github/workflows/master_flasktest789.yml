@@ -34,6 +34,8 @@ jobs:
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
+        env:
+          WAQI_API_KEY: ${{ secrets.WAQI_API_KEY }}
         with:
           name: python-app
           path: |
