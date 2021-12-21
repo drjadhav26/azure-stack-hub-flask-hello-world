@@ -1,4 +1,4 @@
 flask
 python-dotenv
 requests
-logging
+logging==0.4.9.6
