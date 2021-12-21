@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 import requests
 import logging
 
-
 # Load the Azure Maps key from the .env file.
 MAP_KEY ="df281e80ea32d5d73fec41de267055807895176e" #os.environ["MAP_KEY"]
 # Load the World Air Quality Index key from the .env file.
