@@ -7,7 +7,7 @@ import logging
 MAP_KEY ="df281e80ea32d5d73fec41de267055807895176e" #os.environ["MAP_KEY"]
 # Load the World Air Quality Index key from the .env file.
 WAQI_API_KEY = os.getenv("WAQI_API_KEY")
-WAQI_API_KEY1 = "Hello" #os.getenv('WAQI_API_KEY')
+WAQI_API_KEY1 = os.getenv("WAQI_API_KEY")
 logging.info(f'WAQI_API_KEY:{WAQI_API_KEY}')
 WAQI_API_URL = "https://api.waqi.info/map/bounds/?latlng={},{},{},{}&token={}"
 
