@@ -1,11 +1,13 @@
 import os, json
 from flask import Flask, render_template, request
 import requests
+import logging
 
 # Load the Azure Maps key from the .env file.
 MAP_KEY ="df281e80ea32d5d73fec41de267055807895176e" #os.environ["MAP_KEY"]
 # Load the World Air Quality Index key from the .env file.
-WAQI_API_KEY = os.getenv('WAQI_API_KEY')
+WAQI_API_KEY = os.getenv("WAQI_API_KEY")
+logging.info(f'WAQI_API_KEY:{WAQI_API_KEY}')
 WAQI_API_URL = "https://api.waqi.info/map/bounds/?latlng={},{},{},{}&token={}"
 
 # Initialize the Flask app.
